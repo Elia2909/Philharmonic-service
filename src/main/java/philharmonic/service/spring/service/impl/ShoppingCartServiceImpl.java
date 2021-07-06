@@ -1,5 +1,6 @@
 package philharmonic.service.spring.service.impl;
 
+import org.springframework.stereotype.Service;
 import philharmonic.service.spring.dao.ShoppingCartDao;
 import philharmonic.service.spring.dao.TicketDao;
 import philharmonic.service.spring.model.ConcertSession;
@@ -7,7 +8,6 @@ import philharmonic.service.spring.model.ShoppingCart;
 import philharmonic.service.spring.model.Ticket;
 import philharmonic.service.spring.model.User;
 import philharmonic.service.spring.service.ShoppingCartService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class ShoppingCartServiceImpl implements ShoppingCartService {
@@ -20,9 +20,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     }
 
     @Override
-    public void addSession(ConcertSession ConcertSession, User user) {
+    public void addSession(ConcertSession concertSession, User user) {
         Ticket ticket = new Ticket();
-        ticket.setConcertSession(ConcertSession);
+        ticket.setConcertSession(concertSession);
         ticket.setUser(user);
         ShoppingCart shoppingCart = shoppingCartDao.getByUser(user);
         ticketDao.add(ticket);

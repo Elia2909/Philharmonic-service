@@ -5,15 +5,15 @@ import javax.validation.constraints.Size;
 
 public class ConcertRequestDto {
     @NotNull
-    private String ConcertTitle;
+    private String concertTitle;
     @Size(max = 200)
-    private String ConcertDescription;
+    private String concertDescription;
 
     public String getConcertTitle() {
-        return ConcertTitle;
+        return concertTitle;
     }
 
     public String getConcertDescription() {
-        return ConcertDescription;
+        return concertDescription;
     }
 }

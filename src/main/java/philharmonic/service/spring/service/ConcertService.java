@@ -1,11 +1,10 @@
 package philharmonic.service.spring.service;
 
+import java.util.List;
 import philharmonic.service.spring.model.Concert;
 
-import java.util.List;
-
 public interface ConcertService {
-    Concert add(Concert Concert);
+    Concert add(Concert concert);
 
     Concert get(Long id);
 

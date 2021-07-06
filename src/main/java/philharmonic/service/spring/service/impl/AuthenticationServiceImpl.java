@@ -1,14 +1,13 @@
 package philharmonic.service.spring.service.impl;
 
+import java.util.Set;
+import org.springframework.stereotype.Service;
 import philharmonic.service.spring.model.Role;
 import philharmonic.service.spring.model.User;
 import philharmonic.service.spring.service.AuthenticationService;
 import philharmonic.service.spring.service.RoleService;
 import philharmonic.service.spring.service.ShoppingCartService;
 import philharmonic.service.spring.service.UserService;
-import org.springframework.stereotype.Service;
-
-import java.util.Set;
 
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {

@@ -1,9 +1,8 @@
 package philharmonic.service.spring.dto.request;
 
+import javax.validation.constraints.Size;
 import philharmonic.service.spring.lib.FieldsValueMatch;
 import philharmonic.service.spring.lib.ValidEmail;
-
-import javax.validation.constraints.Size;
 
 @FieldsValueMatch(
         field = "password",

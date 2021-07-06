@@ -1,15 +1,14 @@
 package philharmonic.service.spring.dao.impl;
 
-import philharmonic.service.spring.dao.AbstractDao;
-import philharmonic.service.spring.dao.UserDao;
-import philharmonic.service.spring.exception.DataProcessingException;
-import philharmonic.service.spring.model.User;
+import java.util.Optional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
+import philharmonic.service.spring.dao.AbstractDao;
+import philharmonic.service.spring.dao.UserDao;
+import philharmonic.service.spring.exception.DataProcessingException;
+import philharmonic.service.spring.model.User;
 
 @Repository
 public class UserDaoImpl extends AbstractDao<User> implements UserDao {

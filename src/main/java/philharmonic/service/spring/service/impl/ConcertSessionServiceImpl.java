@@ -1,25 +1,24 @@
 package philharmonic.service.spring.service.impl;
 
+import java.time.LocalDate;
+import java.util.List;
+import org.springframework.stereotype.Service;
 import philharmonic.service.spring.dao.ConcertSessionDao;
 import philharmonic.service.spring.exception.DataProcessingException;
 import philharmonic.service.spring.model.ConcertSession;
 import philharmonic.service.spring.service.ConcertSessionService;
-import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Service
 public class ConcertSessionServiceImpl implements ConcertSessionService {
     private final ConcertSessionDao concertSessionDao;
 
-    public ConcertSessionServiceImpl(ConcertSessionDao ConcertSessionDao) {
-        this.concertSessionDao = ConcertSessionDao;
+    public ConcertSessionServiceImpl(ConcertSessionDao concertSessionDao) {
+        this.concertSessionDao = concertSessionDao;
     }
 
     @Override
-    public List<ConcertSession> findAvailableSessions(Long ConcertId, LocalDate date) {
-        return concertSessionDao.findAvailableSessions(ConcertId, date);
+    public List<ConcertSession> findAvailableSessions(Long concertId, LocalDate date) {
+        return concertSessionDao.findAvailableSessions(concertId, date);
     }
 
     @Override
@@ -34,8 +33,8 @@ public class ConcertSessionServiceImpl implements ConcertSessionService {
     }
 
     @Override
-    public ConcertSession update(ConcertSession ConcertSession) {
-        return concertSessionDao.update(ConcertSession);
+    public ConcertSession update(ConcertSession concertSession) {
+        return concertSessionDao.update(concertSession);
     }
 
     @Override

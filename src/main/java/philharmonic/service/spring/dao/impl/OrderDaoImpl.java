@@ -1,16 +1,15 @@
 package philharmonic.service.spring.dao.impl;
 
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 import philharmonic.service.spring.dao.AbstractDao;
 import philharmonic.service.spring.dao.OrderDao;
 import philharmonic.service.spring.exception.DataProcessingException;
 import philharmonic.service.spring.model.Order;
 import philharmonic.service.spring.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public class OrderDaoImpl extends AbstractDao<Order> implements OrderDao {

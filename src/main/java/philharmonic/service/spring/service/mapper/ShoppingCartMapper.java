@@ -1,11 +1,10 @@
 package philharmonic.service.spring.service.mapper;
 
+import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
 import philharmonic.service.spring.dto.response.ShoppingCartResponseDto;
 import philharmonic.service.spring.model.ShoppingCart;
 import philharmonic.service.spring.model.Ticket;
-import org.springframework.stereotype.Component;
-
-import java.util.stream.Collectors;
 
 @Component
 public class ShoppingCartMapper implements

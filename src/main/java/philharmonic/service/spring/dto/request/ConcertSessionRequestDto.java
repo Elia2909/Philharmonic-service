@@ -5,18 +5,18 @@ import javax.validation.constraints.Positive;
 
 public class ConcertSessionRequestDto {
     @Positive
-    private Long ConcertId;
+    private Long concertId;
     @Positive
-    private Long StageId;
+    private Long stageId;
     @NotNull
     private String showTime;
 
     public Long getConcertId() {
-        return ConcertId;
+        return concertId;
     }
 
     public Long getStageId() {
-        return StageId;
+        return stageId;
     }
 
     public String getShowTime() {

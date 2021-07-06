@@ -1,12 +1,11 @@
 package philharmonic.service.spring.dao;
 
-import philharmonic.service.spring.exception.DataProcessingException;
+import java.util.List;
+import java.util.Optional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
-import java.util.List;
-import java.util.Optional;
+import philharmonic.service.spring.exception.DataProcessingException;
 
 public abstract class AbstractDao<T> {
     protected final SessionFactory factory;
@@ -17,21 +16,21 @@ public abstract class AbstractDao<T> {
         this.clazz = clazz;
     }
 
-    public T add(T t) {
+    public T add(T stage) {
         Transaction transaction = null;
         Session session = null;
         try {
             session = factory.openSession();
             transaction = session.beginTransaction();
-            session.save(t);
+            session.save(stage);
             transaction.commit();
-            return t;
+            return stage;
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
             throw new DataProcessingException("Can't insert "
-                    + clazz.getSimpleName() + " " + t, e);
+                    + clazz.getSimpleName() + " " + stage, e);
         } finally {
             if (session != null) {
                 session.close();
@@ -57,21 +56,21 @@ public abstract class AbstractDao<T> {
         }
     }
 
-    public T update(T t) {
+    public T update(T concertSession) {
         Transaction transaction = null;
         Session session = null;
         try {
             session = factory.openSession();
             transaction = session.beginTransaction();
-            session.update(t);
+            session.update(concertSession);
             transaction.commit();
-            return t;
+            return concertSession;
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
             throw new DataProcessingException("Can't update "
-                + clazz.getSimpleName() + " " + t, e);
+                + clazz.getSimpleName() + " " + concertSession, e);
         } finally {
             if (session != null) {
                 session.close();
@@ -85,8 +84,8 @@ public abstract class AbstractDao<T> {
         try {
             session = factory.openSession();
             transaction = session.beginTransaction();
-            T ConcertSession = session.get(clazz, id);
-            session.delete(ConcertSession);
+            T concertSession = session.get(clazz, id);
+            session.delete(concertSession);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {

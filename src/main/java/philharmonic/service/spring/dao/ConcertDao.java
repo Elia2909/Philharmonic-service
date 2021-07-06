@@ -1,12 +1,11 @@
 package philharmonic.service.spring.dao;
 
-import philharmonic.service.spring.model.Concert;
-
 import java.util.List;
 import java.util.Optional;
+import philharmonic.service.spring.model.Concert;
 
 public interface ConcertDao {
-    Concert add(Concert Concert);
+    Concert add(Concert concert);
 
     Optional<Concert> get(Long id);
 

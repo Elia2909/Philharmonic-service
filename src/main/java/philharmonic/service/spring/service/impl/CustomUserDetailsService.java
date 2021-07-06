@@ -1,13 +1,13 @@
 package philharmonic.service.spring.service.impl;
 
-import philharmonic.service.spring.exception.DataProcessingException;
-import philharmonic.service.spring.model.User;
-import philharmonic.service.spring.service.UserService;
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import philharmonic.service.spring.exception.DataProcessingException;
+import philharmonic.service.spring.model.User;
+import philharmonic.service.spring.service.UserService;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

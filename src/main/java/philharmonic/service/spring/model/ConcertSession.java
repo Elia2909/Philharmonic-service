@@ -1,11 +1,11 @@
 package philharmonic.service.spring.model;
 
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.time.LocalDateTime;
 
 @Entity
 public class ConcertSession {
@@ -13,9 +13,9 @@ public class ConcertSession {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    private Concert Concert;
+    private Concert concert;
     @ManyToOne
-    private Stage Stage;
+    private Stage stage;
     private LocalDateTime showTime;
 
     public Long getId() {
@@ -27,19 +27,19 @@ public class ConcertSession {
     }
 
     public Concert getConcert() {
-        return Concert;
+        return concert;
     }
 
-    public void setConcert(Concert Concert) {
-        this.Concert = Concert;
+    public void setConcert(Concert concert) {
+        this.concert = concert;
     }
 
     public Stage getStage() {
-        return Stage;
+        return stage;
     }
 
-    public void setStage(Stage Stage) {
-        this.Stage = Stage;
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 
     public LocalDateTime getShowTime() {
@@ -54,8 +54,8 @@ public class ConcertSession {
     public String toString() {
         return "ConcertSession{"
                 + "id=" + id
-                + ", Concert=" + Concert
-                + ", Stage=" + Stage
+                + ", Concert=" + concert
+                + ", Stage=" + stage
                 + ", showTime=" + showTime + '}';
     }
 }

@@ -1,12 +1,11 @@
 package philharmonic.service.spring.dao;
 
-import philharmonic.service.spring.model.Stage;
-
 import java.util.List;
 import java.util.Optional;
+import philharmonic.service.spring.model.Stage;
 
 public interface StageDao {
-    Stage add(Stage Stage);
+    Stage add(Stage stage);
 
     Optional<Stage> get(Long id);
 

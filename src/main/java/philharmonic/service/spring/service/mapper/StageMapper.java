@@ -1,9 +1,9 @@
 package philharmonic.service.spring.service.mapper;
 
+import org.springframework.stereotype.Component;
 import philharmonic.service.spring.dto.request.StageRequestDto;
 import philharmonic.service.spring.dto.response.StageResponseDto;
 import philharmonic.service.spring.model.Stage;
-import org.springframework.stereotype.Component;
 
 @Component
 public class StageMapper implements RequestDtoMapper<StageRequestDto, Stage>,
@@ -17,10 +17,10 @@ public class StageMapper implements RequestDtoMapper<StageRequestDto, Stage>,
     }
 
     @Override
-    public StageResponseDto mapToDto(Stage Stage) {
+    public StageResponseDto mapToDto(Stage stage) {
         StageResponseDto responseDto = new StageResponseDto();
-        responseDto.setId(Stage.getId());
-        responseDto.setDescription(Stage.getDescription());
+        responseDto.setId(stage.getId());
+        responseDto.setDescription(stage.getDescription());
         return responseDto;
     }
 }

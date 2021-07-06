@@ -14,7 +14,7 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
-    private ConcertSession ConcertSession;
+    private ConcertSession concertSession;
     @OneToOne(fetch = FetchType.LAZY)
     private User user;
 
@@ -27,11 +27,11 @@ public class Ticket {
     }
 
     public ConcertSession getConcertSession() {
-        return ConcertSession;
+        return concertSession;
     }
 
-    public void setConcertSession(ConcertSession ConcertSession) {
-        this.ConcertSession = ConcertSession;
+    public void setConcertSession(ConcertSession concertSession) {
+        this.concertSession = concertSession;
     }
 
     public User getUser() {
@@ -46,7 +46,7 @@ public class Ticket {
     public String toString() {
         return "Ticket{"
                 + "id=" + id
-                + ", ConcertSession=" + ConcertSession
+                + ", ConcertSession=" + concertSession
                 + ", user=" + user + '}';
     }
 }

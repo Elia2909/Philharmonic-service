@@ -1,9 +1,9 @@
 package philharmonic.service.spring.service.mapper;
 
+import org.springframework.stereotype.Component;
 import philharmonic.service.spring.dto.request.ConcertRequestDto;
 import philharmonic.service.spring.dto.response.ConcertResponseDto;
 import philharmonic.service.spring.model.Concert;
-import org.springframework.stereotype.Component;
 
 @Component
 public class ConcertMapper implements RequestDtoMapper<ConcertRequestDto, Concert>,
@@ -17,11 +17,11 @@ public class ConcertMapper implements RequestDtoMapper<ConcertRequestDto, Concer
     }
 
     @Override
-    public ConcertResponseDto mapToDto(Concert Concert) {
+    public ConcertResponseDto mapToDto(Concert concert) {
         ConcertResponseDto responseDto = new ConcertResponseDto();
-        responseDto.setConcertId(Concert.getId());
-        responseDto.setConcertTitle(Concert.getTitle());
-        responseDto.setConcertDescription(Concert.getDescription());
+        responseDto.setConcertId(concert.getId());
+        responseDto.setConcertTitle(concert.getTitle());
+        responseDto.setConcertDescription(concert.getDescription());
         return responseDto;
     }
 }

@@ -1,11 +1,10 @@
 package philharmonic.service.spring.service;
 
+import java.util.List;
 import philharmonic.service.spring.model.Stage;
 
-import java.util.List;
-
 public interface StageService {
-    Stage add(Stage Stage);
+    Stage add(Stage stage);
 
     Stage get(Long id);
 

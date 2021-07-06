@@ -1,42 +1,42 @@
 package philharmonic.service.spring.dto.response;
 
 public class ConcertSessionResponseDto {
-    private Long ConcertSessionId;
-    private Long ConcertId;
-    private String ConcertTitle;
-    private Long StageId;
+    private Long concertSessionId;
+    private Long concertId;
+    private String concertTitle;
+    private Long stageId;
     private String showTime;
 
     public Long getConcertSessionId() {
-        return ConcertSessionId;
+        return concertSessionId;
     }
 
-    public void setConcertSessionId(Long ConcertSessionId) {
-        this.ConcertSessionId = ConcertSessionId;
+    public void setConcertSessionId(Long concertSessionId) {
+        this.concertSessionId = concertSessionId;
     }
 
     public Long getConcertId() {
-        return ConcertId;
+        return concertId;
     }
 
-    public void setConcertId(Long ConcertId) {
-        this.ConcertId = ConcertId;
+    public void setConcertId(Long concertId) {
+        this.concertId = concertId;
     }
 
     public String getConcertTitle() {
-        return ConcertTitle;
+        return concertTitle;
     }
 
-    public void setConcertTitle(String ConcertTitle) {
-        this.ConcertTitle = ConcertTitle;
+    public void setConcertTitle(String concertTitle) {
+        this.concertTitle = concertTitle;
     }
 
     public Long getStageId() {
-        return StageId;
+        return stageId;
     }
 
-    public void setStageId(Long StageId) {
-        this.StageId = StageId;
+    public void setStageId(Long stageId) {
+        this.stageId = stageId;
     }
 
     public String getShowTime() {

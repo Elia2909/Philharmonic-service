@@ -1,10 +1,10 @@
 package philharmonic.service.spring.model;
 
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Objects;
 
 @Entity
 public class Concert {
@@ -55,10 +55,10 @@ public class Concert {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Concert Concert = (Concert) o;
-        return Objects.equals(id, Concert.id)
-                && Objects.equals(title, Concert.title)
-                && Objects.equals(description, Concert.description);
+        Concert concert = (Concert) o;
+        return Objects.equals(id, concert.id)
+                && Objects.equals(title, concert.title)
+                && Objects.equals(description, concert.description);
     }
 
     @Override

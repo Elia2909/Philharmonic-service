@@ -1,8 +1,7 @@
 package philharmonic.service.spring.dao;
 
-import philharmonic.service.spring.model.User;
-
 import java.util.Optional;
+import philharmonic.service.spring.model.User;
 
 public interface UserDao {
     User add(User user);

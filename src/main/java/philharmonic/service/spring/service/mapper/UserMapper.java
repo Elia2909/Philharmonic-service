@@ -1,8 +1,8 @@
 package philharmonic.service.spring.service.mapper;
 
+import org.springframework.stereotype.Component;
 import philharmonic.service.spring.dto.response.UserResponseDto;
 import philharmonic.service.spring.model.User;
-import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper implements ResponseDtoMapper<UserResponseDto, User> {

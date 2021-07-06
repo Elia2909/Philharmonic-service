@@ -1,31 +1,31 @@
 package philharmonic.service.spring.dto.response;
 
 public class ConcertResponseDto {
-    private Long ConcertId;
-    private String ConcertTitle;
-    private String ConcertDescription;
+    private Long concertId;
+    private String concertTitle;
+    private String concertDescription;
 
     public Long getConcertId() {
-        return ConcertId;
+        return concertId;
     }
 
-    public void setConcertId(Long ConcertId) {
-        this.ConcertId = ConcertId;
+    public void setConcertId(Long concertId) {
+        this.concertId = concertId;
     }
 
     public String getConcertTitle() {
-        return ConcertTitle;
+        return concertTitle;
     }
 
-    public void setConcertTitle(String ConcertTitle) {
-        this.ConcertTitle = ConcertTitle;
+    public void setConcertTitle(String concertTitle) {
+        this.concertTitle = concertTitle;
     }
 
     public String getConcertDescription() {
-        return ConcertDescription;
+        return concertDescription;
     }
 
-    public void setConcertDescription(String ConcertDescription) {
-        this.ConcertDescription = ConcertDescription;
+    public void setConcertDescription(String concertDescription) {
+        this.concertDescription = concertDescription;
     }
 }

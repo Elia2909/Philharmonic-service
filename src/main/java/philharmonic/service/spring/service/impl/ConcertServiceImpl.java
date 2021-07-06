@@ -1,24 +1,23 @@
 package philharmonic.service.spring.service.impl;
 
+import java.util.List;
+import org.springframework.stereotype.Service;
 import philharmonic.service.spring.dao.ConcertDao;
 import philharmonic.service.spring.exception.DataProcessingException;
 import philharmonic.service.spring.model.Concert;
 import philharmonic.service.spring.service.ConcertService;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ConcertServiceImpl implements ConcertService {
     private final ConcertDao concertDao;
 
-    public ConcertServiceImpl(ConcertDao ConcertDao) {
-        this.concertDao = ConcertDao;
+    public ConcertServiceImpl(ConcertDao concertDao) {
+        this.concertDao = concertDao;
     }
 
     @Override
-    public Concert add(Concert Concert) {
-        return concertDao.add(Concert);
+    public Concert add(Concert concert) {
+        return concertDao.add(concert);
     }
 
     @Override

@@ -1,5 +1,13 @@
 package philharmonic.service.spring.controller;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import philharmonic.service.spring.dto.response.OrderResponseDto;
 import philharmonic.service.spring.model.ShoppingCart;
 import philharmonic.service.spring.model.User;
@@ -7,15 +15,6 @@ import philharmonic.service.spring.service.OrderService;
 import philharmonic.service.spring.service.ShoppingCartService;
 import philharmonic.service.spring.service.UserService;
 import philharmonic.service.spring.service.mapper.OrderMapper;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/orders")

@@ -5,7 +5,7 @@ import philharmonic.service.spring.model.ShoppingCart;
 import philharmonic.service.spring.model.User;
 
 public interface ShoppingCartService {
-    void addSession(ConcertSession ConcertSession, User user);
+    void addSession(ConcertSession concertSession, User user);
 
     ShoppingCart getByUser(User user);
 

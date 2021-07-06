@@ -1,11 +1,11 @@
 package philharmonic.service.spring.service.impl;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import philharmonic.service.spring.dao.UserDao;
 import philharmonic.service.spring.exception.DataProcessingException;
 import philharmonic.service.spring.model.User;
 import philharmonic.service.spring.service.UserService;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {

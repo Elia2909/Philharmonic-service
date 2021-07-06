@@ -1,10 +1,10 @@
 package philharmonic.service.spring.service.impl;
 
+import org.springframework.stereotype.Service;
 import philharmonic.service.spring.dao.RoleDao;
 import philharmonic.service.spring.exception.DataProcessingException;
 import philharmonic.service.spring.model.Role;
 import philharmonic.service.spring.service.RoleService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class RoleServiceImpl implements RoleService {

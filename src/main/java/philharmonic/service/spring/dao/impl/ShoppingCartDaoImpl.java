@@ -1,14 +1,14 @@
 package philharmonic.service.spring.dao.impl;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 import philharmonic.service.spring.dao.AbstractDao;
 import philharmonic.service.spring.dao.ShoppingCartDao;
 import philharmonic.service.spring.exception.DataProcessingException;
 import philharmonic.service.spring.model.ShoppingCart;
 import philharmonic.service.spring.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-import org.springframework.stereotype.Repository;
 
 @Repository
 public class ShoppingCartDaoImpl extends AbstractDao<ShoppingCart> implements ShoppingCartDao {

@@ -1,15 +1,14 @@
 package philharmonic.service.spring.controller;
 
+import javax.validation.Valid;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import philharmonic.service.spring.dto.request.UserRequestDto;
 import philharmonic.service.spring.dto.response.UserResponseDto;
 import philharmonic.service.spring.model.User;
 import philharmonic.service.spring.service.AuthenticationService;
 import philharmonic.service.spring.service.mapper.UserMapper;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.validation.Valid;
 
 @RestController
 public class AuthenticationController {
