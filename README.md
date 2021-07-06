@@ -1,4 +1,4 @@
-# Philharmonic-service(in progress) 
+# Philharmonic-service
 This is a RESTful project that was written for philharmonic as an online service. In it, you can register and buy tickets for the philharmonic session. This application used N-tier architecture.
 # Features
 Features for users 
